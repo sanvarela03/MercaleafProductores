@@ -46,6 +46,7 @@ class ProductActivity : AppCompatActivity() {
 
 
                 et_name_p_id_2.setText("${producto?.nombre}",TextView.BufferType.EDITABLE)
+                et_description_p_id_2.setText("${producto?.descripcion}",TextView.BufferType.EDITABLE)
 
             }
 

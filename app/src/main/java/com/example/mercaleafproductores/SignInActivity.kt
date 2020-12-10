@@ -176,7 +176,7 @@ class SignInActivity : AppCompatActivity() {
         getGoogleSignInClient().signOut()
             .addOnCompleteListener(this, OnCompleteListener<Void?> {
                 Toast.makeText(this, "OK", Toast.LENGTH_LONG).show()
-                val intent: Intent = Intent(this, MainActivity::class.java)
+                val intent: Intent = Intent(this, LogInActivity::class.java)
                 startActivity(intent)
                 finish()
             })

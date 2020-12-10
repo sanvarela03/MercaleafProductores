@@ -12,7 +12,7 @@ interface ProducerAPI {
         fun create(): ProducerAPI {
 
             var retrofit = Retrofit.Builder()
-                .baseUrl("http://192.168.0.106:8090/mercaleaf/productores/")
+                .baseUrl("http://192.168.0.108:8090/mercaleaf/productores/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
 

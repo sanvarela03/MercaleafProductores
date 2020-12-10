@@ -103,10 +103,11 @@ class ProducerActivity : AppCompatActivity() {
                 the_productor_name.text = producer?.nombre
                 the_rol_name_txt.text = producer?.rol?.nombre
                 the_productor_email.text = producer?.email
-
-                Glide.with(this@ProducerActivity).load(cuenta?.photoUrl.toString())
+//                cuenta?.photoUrl.toString()
+                Glide.with(this@ProducerActivity).load("http://192.168.0.108:8090/api/verfoto/9f9a5610-2920-4864-88e0-6267a6a37311_2020-07-02-19-48-00-503.jpg")
                     .apply(RequestOptions.circleCropTransform()).into(the_productor_photo)
 
+                Log.d("FOTO","URL DE FOTO: ${cuenta?.photoUrl.toString()}")
                 setListeners()
 
                 the_product_list.adapter =
@@ -219,7 +220,8 @@ class ProducerActivity : AppCompatActivity() {
         getGoogleSignInClient().signOut()
             .addOnCompleteListener(this, OnCompleteListener<Void?> {
                 Toast.makeText(this, "GoodBye", Toast.LENGTH_LONG).show()
-                val intent: Intent = Intent(this, MainActivity::class.java)
+                val intent: Intent = Intent(this, SplashActivity
+                ::class.java)
                 startActivity(intent)
                 finish()
             })

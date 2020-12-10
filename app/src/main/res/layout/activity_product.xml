@@ -8,29 +8,58 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="245dp"
-        android:layout_height="263dp"
-        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.47">
+        app:layout_constraintVertical_bias="0.178">
 
-        <EditText
-            android:id="@+id/et_name_p_id_2"
-            android:layout_width="wrap_content"
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20sp"
-            android:ems="10"
-            android:hint="Nombre"
-            android:inputType="textPersonName" />
+            android:layout_marginTop="20sp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_name_p_id_2"
+                android:layout_width="194dp"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="Nombre"
+                android:inputType="textPersonName"
+                android:text="Toothbrush"
+                android:textSize="35sp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/et_price_p_id_2"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50sp"
+                android:background="@android:color/transparent"
+                android:ems="10"
+                android:hint="$ precio"
+                android:inputType="textPersonName"
+                android:text="$4.50" />
+        </LinearLayout>
 
         <EditText
             android:id="@+id/et_description_p_id_2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
             android:layout_marginBottom="20sp"
             android:ems="10"
             android:hint="Descripcion"
@@ -45,29 +74,7 @@
             android:hint="Capacidad de venta"
             android:inputType="textPersonName" />
 
-        <EditText
-            android:id="@+id/et_price_p_id_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="$ precio"
-            android:inputType="textPersonName" />
-
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Producto"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
 
     <Button
         android:id="@+id/btn_agregar_id2"
@@ -81,4 +88,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout"
         app:layout_constraintVertical_bias="0.144" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
